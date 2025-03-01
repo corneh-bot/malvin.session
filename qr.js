@@ -60,32 +60,32 @@ router.get('/', async (req, res) => {
 	
 				   let MALVIN_KING_TEXT = `
 ┏━━━━━━━━━━━━━━
-┃ᴍᴀʟᴠɪɴ-ᴍᴅ SESSION IS 
+┃CORNEH-ᴍᴅ SESSION IS 
 ┃SUCCESSFULLY
 ┃CONNECTED ✅🔥
 ┗━━━━━━━━━━━━━━━
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❶ || Creator = 𖥘⚡ ᴍᴀʟᴠɪɴ-ᴋɪɴɢ ⚡𖥘
+❶ || Creator = 𖥘⚡ CORNEH TECH ⚡𖥘
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❷ || https://whatsapp.com/channel/0029Vac8SosLY6d7CAFndv3Z
+❷ ||https://whatsapp.com/channel/0029Vb32FIvD8SDyl6qmsA1b
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❸ || Owner = https://wa.me/263780166288
+❸ || Owner = https://wa.me/254717226465
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❺ || Bot Repo = https://github.com/kingmalvn/RAVENS-MD
+❺ || Bot Repo = https://github.com/corneh-bot/KAMWANA
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❻ || YouTube = https://www.youtube.com/@MalvinKing_TECH 
+❻ || YouTube = https://www.youtube.com/@dolah254 
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-©2024-2099 ᴍᴀʟᴠɪɴ-ᴋɪɴɢ_`
-	 await Qr_Code_By_Malvin_King.sendMessage(Qr_Code_By_Malvin_King.user.id,{text:MALVIN_KING_TEXT},{quoted:session})
+©2024-2099 CORNEH-TECH_`
+	 await Qr_Code_By_Corneh_tech.sendMessage(Qr_Code_By_Corneh_tech.user.id,{text:CORNEH_TECH_TEXT},{quoted:session})
 
 
 
 					await delay(100);
-					await Qr_Code_By_Malvin_King.ws.close();
+					await Qr_Code_By_CORNEH_TECH.ws.close();
 					return await removeFile("temp/" + id);
 				} else if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401) {
 					await delay(10000);
-					MALVIN_KING_QR_CODE();
+					CORNEH_TECH_QR_CODE();
 				}
 			});
 		} catch (err) {
@@ -98,6 +98,6 @@ router.get('/', async (req, res) => {
 			await removeFile("temp/" + id);
 		}
 	}
-	return await MALVIN_KING_QR_CODE()
+	return await CORNEH_TECH_QR_CODE()
 });
 module.exports = router
