@@ -8,7 +8,7 @@ const fs = require('fs');
 let router = express.Router()
 const pino = require("pino");
 const {
-	default: Malvin_King,
+	default: CORNEH,
 	useMultiFileAuthState,
 	jidNormalizedUser,
 	Browsers,
@@ -28,13 +28,13 @@ const {
 } = require("node:fs/promises")
 router.get('/', async (req, res) => {
 	const id = makeid();
-	async function MALVIN_KING_QR_CODE() {
+	async function CORNEH_TECH_QR_CODE() {
 		const {
 			state,
 			saveCreds
 		} = await useMultiFileAuthState('./temp/' + id)
 		try {
-			let Qr_Code_By_Malvin_King = Malvin_King({
+			let Qr_Code_By_corneh_tech = corneh({
 				auth: state,
 				printQRInTerminal: false,
 				logger: pino({
@@ -43,8 +43,8 @@ router.get('/', async (req, res) => {
 				browser: Browsers.macOS("Desktop"),
 			});
 
-			Qr_Code_By_Malvin_King.ev.on('creds.update', saveCreds)
-			Qr_Code_By_Malvin_King.ev.on("connection.update", async (s) => {
+			Qr_Code_By_corneh_tech.ev.on('creds.update', saveCreds)
+			Qr_Code_By_corneh_tech.ev.on("connection.update", async (s) => {
 				const {
 					connection,
 					lastDisconnect,
@@ -56,7 +56,7 @@ router.get('/', async (req, res) => {
 					let data = fs.readFileSync(__dirname + `/temp/${id}/creds.json`);
 					await delay(800);
 				   let b64data = Buffer.from(data).toString('base64');
-				   let session = await Qr_Code_By_Malvin_King.sendMessage(Qr_Code_By_Malvin_King.user.id, { text: '' + b64data });
+				   let session = await Qr_Code_By_Corneh_tech.sendMessage(Qr_Code_By_corneh_tech.user.id, { text: '' + b64data });
 	
 				   let MALVIN_KING_TEXT = `
 ┏━━━━━━━━━━━━━━
